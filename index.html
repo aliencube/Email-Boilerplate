@@ -1,88 +1,540 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<!--[if lt IE 7 ]> <html lang="ko" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="ko" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="ko" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="ko" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="ko" class="no-js"> <!--<![endif]-->
 <head>
-  <meta charset='utf-8'>
-
-  <title>seanpowell/Email-Boilerplate @ GitHub</title>
-
-  <style type="text/css">
-    body {
-      margin-top: 1.0em;
-      background-color: #cd35fb;
-      font-family: Helvetica, Arial, FreeSans, san-serif;
-      color: #000000;
-    }
-    #container {
-      margin: 0 auto;
-      width: 700px;
-    }
-    h1 { font-size: 3.8em; color: #32ca04; margin-bottom: 3px; }
-    h1 .small { font-size: 0.4em; }
-    h1 a { text-decoration: none }
-    h2 { font-size: 1.5em; color: #32ca04; }
-    h3 { text-align: center; color: #32ca04; }
-    a { color: #32ca04; }
-    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
-    .download { float: right; }
-    pre { background: #000; color: #fff; padding: 15px;}
-    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
-    .footer { text-align:center; padding-top:30px; font-style: italic; }
-  </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>HTML EMAIL BOILERPLATE v 0.5 updated 11/5 - Korean Translation</title>
+    <meta name="description" content="HTML Email Boilerplate website translated in Korean.">
+    <meta name="author" content="Sean Powell">
+    <meta name="author" content="Justin Yoo">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Added/External stylesheets  -->
+    <link rel="stylesheet" href="css/960.css">
+    <link rel="stylesheet" href="css/shCore.css">
+    <link rel="stylesheet" href="css/shThemeRDark.css">
+    
+    <!-- Site specific stylesheets -->
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="stylesheet" href="css/style.css?v=2">
+    <link rel="stylesheet" media="handheld" href="css/handheld.css?v=2">
+    <link rel="stylesheet" href="css/colorbox.css">
+    
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    
+    <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
+      <script src="js/libs/modernizr-1.6.min.js"></script>
 </head>
+<body>   
+<div id="site_container">     
+   <section id="one">
+       <div class="container_12"> 
+        <header>
+            
+            <div class="nav grid_4 push_1">
+            <span style="color: grey;">HTML EMAIL</span> <span style="color: black;">BOILERPLATE</span>  <span style="color: #a11414; font-size: smaller">v 0.5</span>
+            </div>
+            <div class="nav grid_5 push_2">
+                <nav title="something">
+                <a href="#f1"><span style="color:#a11414">GET THE CODE</span></a> | <a href="#f2"><span style="color: orange;">PEEP SOME FEATURES</span></a>
+                </nav>
+            </div>
+            
+            
+       </header>
+        <div id="mainpage">
+            <div id ="main_copy" class="grid_5 push_7">
+                Welcome to the HTML <em>Email</em> Boilerplate. This website and <a href="#f1">its sample code</a>
+                 creates a template of sorts, absent of design or layout, that will help you avoid some of the major rendering problems with the most common email clients out there &mdash; Gmail, Outlook, Yahoo Mail, etc. <m>While not plug and play (you know, you'll have to do some work ;-), it will provide some helpful examples and snippets that will keep your email design rendering as true-to-form as possible.</m>
+            </div>
+            <!-- .grid_5 push_4 -->
+        </div>    
+        
+       </div> 
+       <!-- end container -->
+         <footer id="f1">
+             
+         </footer>
+  </section>
+     <!-- end one -->
+     
+     <div class="clearfix"></div> 
+     <a href="http://github.com/seanpowell/Email-Boilerplate"><img style="position: relative; top: -50px; left: 0; border: 0; float: left; display: inline;" src="https://d3nwyuy0nl342s.cloudfront.net/img/6429057dfef9e98189338d22e7f6646c6694f032/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f6f72616e67655f6666373630302e706e67" alt="Fork me on GitHub"></a>  
+     <section id="two">
+         <div class="container_12 two_contain">
+             <div class="grid_8"><h1><span style="color:#b8c2b9;">THE</span> <span style="color:black;">CODE</span></h1></div>
+             <div class="grid_4" id="code-side"><p>The meat of the project lies here in the Code section.  Feel free to copy and paste as necessary.</p>  <p><a href="http://tinyletter.com/ebp" title="Newsletter" alt="Newsletter">Subscribe to receive updates</a> on the html email boilerplate project.</p></div>
+             <div id="download" class="grid_4 push_4"><span class="tilde">~</span> <a href="https://github.com/seanpowell/Email-Boilerplate/zipball/master" title="Download the HTML Email Boilerplate">Download the Boilerplate</a> <span class="tilde">~</span><br /><span id="instruction">(includes an instruction-less version)</span></div>
+        </div>                            
+<div class="clearfix"></div>
+<div id="code_wrapper">
+<pre class="brush: html, first-line: 1;">
+&lt;!-- ***************************************************
+********************************************************
 
-<body>
-  <a href="https://github.com/seanpowell/Email-Boilerplate"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
+HOW TO USE: Use these code examples as a guideline for formatting your HTML email. You may want to create your own template based on these snippets or just pick and choose the ones that fix your specific rendering issue(s). There are two main areas in the template: 1. The header (head) area of the document. You will find global styles, where indicated, to move inline. 2. The body section contains more specific fixes and guidance to use where needed in your design.
 
-  <div id="container">
+DO NOT COPY OVER COMMENTS AND INSTRUCTIONS WITH THE CODE to your message or risk spam box banishment :).
 
-    <div class="download">
-      <a href="https://github.com/seanpowell/Email-Boilerplate/zipball/master">
-        <img border="0" width="90" src="https://github.com/images/modules/download/zip.png"></a>
-      <a href="https://github.com/seanpowell/Email-Boilerplate/tarball/master">
-        <img border="0" width="90" src="https://github.com/images/modules/download/tar.png"></a>
-    </div>
+It is important to note that sometimes the styles in the header area should not be or don't need to be brought inline. Those instances will be marked accordingly in the comments.
 
-    <h1><a href="https://github.com/seanpowell/Email-Boilerplate">Email-Boilerplate</a>
-      <span class="small">by <a href="https://github.com/seanpowell">seanpowell</a></span></h1>
+********************************************************  
+**************************************************** --&gt;
 
-    <div class="description">
-      The email boilerplate for sending out nicely formatted messages.
-    </div>
+&lt;!-- Using the xHTML doctype is a good practice when sending HTML email. While not the only doctype you can use, it seems to have the least inconsistencies. For more information on which one may work best for you, check out the resources below.
 
+UPDATED: Now using xHTML strict based on the fact that gmail and hotmail uses it.  Find out more about that, and another great boilerplate, here: http://www.emailology.org/#1
+
+More info/Reference on doctypes in email: 
+Campaign Monitor - http://www.campaignmonitor.com/blog/post/3317/correct-doctype-to-use-in-html-email/
+Email on Acid - http://www.emailonacid.com/blog/details/C18/doctype_-_the_black_sheep_of_html_email_design
+--&gt;
+
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt; 
     
+&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+&lt;head&gt;
+    &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8" /&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"/&gt;
+    &lt;title&gt;Your Message Subject or Title&lt;/title&gt;
+    &lt;style type="text/css"&gt;
+    </pre>
+    <br />
+    <pre class="brush: css, first-line: 26">
+        /***********
+        Originally based on The MailChimp Reset from Fabio Carneiro, MailChimp User Experience Design
+        More info and templates on Github: https://github.com/mailchimp/Email-Blueprints
+        http://www.mailchimp.com &amp; http://www.fabio-carneiro.com
 
+        INLINE: Yes.
+        ***********/  
+        /* Client-specific Styles */
+        #outlook a {padding:0;} /* Force Outlook to provide a "view in browser" menu link. */
+        body{width:100% !important; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; margin:0; padding:0;} 
+        /* Prevent Webkit and Windows Mobile platforms from changing default font sizes, while not breaking desktop design. */ 
+        .ExternalClass {width:100%;} /* Force Hotmail to display emails at full width */  
+        .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height: 100%;} /* Force Hotmail to display normal line spacing.  More on that: http://www.emailonacid.com/forum/viewthread/43/ */ 
+        #backgroundTable {margin:0; padding:0; width:100% !important; line-height: 100% !important;}
+        /* End reset */
+
+        /* Some sensible defaults for images  
+        1. "-ms-interpolation-mode: bicubic" works to help ie properly resize images in IE. (if you are resizing them using the width and height attributes)
+        2. "border:none" removes border when linking images.
+        3. Updated the common Gmail/Hotmail image display fix: Gmail and Hotmail unwantedly adds in an extra space below images when using non IE browsers. You may not always want all of your images to be block elements. Apply the "image_fix" class to any image you need to fix.
+
+        Bring inline: Yes.
+        */
+        img {outline:none; text-decoration:none; -ms-interpolation-mode: bicubic;} 
+        a img {border:none;} 
+        .image_fix {display:block;}
+
+        /** Yahoo paragraph fix: removes the proper spacing or the paragraph (p) tag. To correct we set the top/bottom margin to 1em in the head of the document. Simple fix with little effect on other styling. NOTE: It is also common to use two breaks instead of the paragraph tag but I think this way is cleaner and more semantic. NOTE: This example recommends 1em. More info on setting web defaults: http://www.w3.org/TR/CSS21/sample.html or http://meiert.com/en/blog/20070922/user-agent-style-sheets/
+
+        Bring inline: Yes.
+        **/
+        p {margin: 1em 0;}
+
+        /** Hotmail header color reset: Hotmail replaces your header color styles with a green color on H2, H3, H4, H5, and H6 tags. In this example, the color is reset to black for a non-linked header, blue for a linked header, red for an active header (limited support), and purple for a visited header (limited support).  Replace with your choice of color. The !important is really what is overriding Hotmail's styling. Hotmail also sets the H1 and H2 tags to the same size. 
+
+        Bring inline: Yes.
+        **/
+        h1, h2, h3, h4, h5, h6 {color: black !important;}
+
+        h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {color: blue !important;}
+
+        h1 a:active, h2 a:active,  h3 a:active, h4 a:active, h5 a:active, h6 a:active {
+            color: red !important; /* Preferably not the same color as the normal header link color.  There is limited support for psuedo classes in email clients, this was added just for good measure. */
+        }
+
+        h1 a:visited, h2 a:visited,  h3 a:visited, h4 a:visited, h5 a:visited, h6 a:visited {
+            color: purple !important; /* Preferably not the same color as the normal header link color. There is limited support for psuedo classes in email clients, this was added just for good measure. */
+        }
+
+        /** Outlook 07, 10 Padding issue: These "newer" versions of Outlook add some padding around table cells potentially throwing off your perfectly pixeled table.  The issue can cause added space and also throw off borders completely.  Use this fix in your header or inline to safely fix your table woes.
+
+        More info: http://www.ianhoar.com/2008/04/29/outlook-2007-borders-and-1px-padding-on-table-cells/ 
+        http://www.campaignmonitor.com/blog/post/3392/1px-borders-padding-on-table-cells-in-outlook-07/
+
+        H/T @edmelly 
+
+        Bring inline: No.
+        **/
+        table td {border-collapse: collapse;}
+
+        /* Styling your links has become much simpler with the new Yahoo.  In fact, it falls in line with the main credo of styling in email, bring your styles inline.  Your link colors will be uniform across clients when brought inline.
+
+        Bring inline: Yes. */
+        a {color: orange;}
+
+        /* Or to go the gold star route...
+        a:link { color: orange; }
+        a:visited { color: blue; }
+        a:hover { color: green; }
+        */
+
+        /***************************************************
+        ****************************************************
+        MOBILE TARGETING
+
+        Use @media queries with care.  You should not bring these styles inline -- so it's recommended to apply them AFTER you bring the other stlying inline.
+
+        Note: test carefully with Yahoo.
+        Note 2: Don't bring anything below this line inline.
+        ****************************************************
+        ***************************************************/
+
+        /* NOTE: To properly use @media queries and play nice with yahoo mail, use attribute selectors in place of class, id declarations.
+        table[class=classname]
+        Read more: http://www.campaignmonitor.com/blog/post/3457/media-query-issues-in-yahoo-mail-mobile-email/ 
+        */ 
+        @media only screen and (max-device-width: 480px) {
+
+            /* A nice and clean way to target phone numbers you want clickable and avoid a mobile phone from linking other numbers that look like, but are not phone numbers.  Use these two blocks of code to "unstyle" any numbers that may be linked.  The second block gives you a class to apply with a span tag to the numbers you would like linked and styled.
+
+            Inspired by Campaign Monitor's article on using phone numbers in email: http://www.campaignmonitor.com/blog/post/3571/using-phone-numbers-in-html-email/. 
+
+            Step 1 (Step 2: line 224)
+            */
+            a[href^="tel"], a[href^="sms"] {
+                text-decoration: none;
+                color: black; /* or whatever your want */
+                pointer-events: none;
+                cursor: default;
+            }
+
+            .mobile_link a[href^="tel"], .mobile_link a[href^="sms"] {
+                text-decoration: default;
+                color: orange !important; /* or whatever your want */
+                pointer-events: auto;
+                cursor: default;
+            }
+        }
+
+        /* More Specific Targeting */
+
+        @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+            /* You guessed it, ipad (tablets, smaller screens, etc) */
+
+            /* Step 1a: Repeating for the iPad */
+            a[href^="tel"], a[href^="sms"] {
+                text-decoration: none;
+                color: blue; /* or whatever your want */
+                pointer-events: none;
+                cursor: default;
+            }
+
+            .mobile_link a[href^="tel"], .mobile_link a[href^="sms"] {
+                text-decoration: default;
+                color: orange !important;
+                pointer-events: auto;
+                cursor: default;
+            }
+        }
+
+        @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+            /* Put your iPhone 4g styles in here */ 
+        }
+
+        /* Following Android targeting from: 
+        http://developer.android.com/guide/webapps/targeting.html
+        http://pugetworks.com/2011/04/css-media-queries-for-targeting-different-mobile-devices/  */
+        
+        @media only screen and (-webkit-device-pixel-ratio:.75){
+            /* Put CSS for low density (ldpi) Android layouts in here */
+        }
+        
+        @media only screen and (-webkit-device-pixel-ratio:1){
+            /* Put CSS for medium density (mdpi) Android layouts in here */
+        }
+
+        @media only screen and (-webkit-device-pixel-ratio:1.5){
+            /* Put CSS for high density (hdpi) Android layouts in here */
+        }
+/* end Android targeting */   
+    </pre>
+    <pre class="brush: html, first-line:99">
+        &lt;/style&gt;
+
+        &lt;!-- Targeting Windows Mobile --&gt;
+        &lt;!--[if IEMobile 7]&gt;
+        &lt;style type="text/css"&gt;
+            
+        &lt;/style&gt;
+        &lt;![endif]--&gt;   
+
+        &lt;!-- ***********************************************
+        ****************************************************
+        END MOBILE TARGETING
+        ****************************************************
+        ************************************************ --&gt;
+
+        &lt;!--[if gte mso 9]&gt;
+        &lt;style&gt;
+            /* Target Outlook 2007 and 2010 */
+        &lt;/style&gt;
+        &lt;![endif]--&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- Wrapper/Container Table: Use a wrapper table to control the width and the background color consistently of your email. Use this approach instead of setting attributes on the body tag. --&gt;
+    &lt;table cellpadding="0" cellspacing="0" border="0" id="backgroundTable"&gt;
+    &lt;tr&gt;
+        &lt;td&gt; 
+                     
+        &lt;!-- Tables are the most common way to format your email consistently. Set your table widths inside cells and in most cases reset cellpadding, cellspacing, and border to zero. Use nested tables as a way to space effectively in your message. --&gt;
+        &lt;table cellpadding="0" cellspacing="0" border="0" align="center"&gt;
+            &lt;tr&gt;
+                &lt;td width="200" valign="top"&gt;&lt;/td&gt;
+                &lt;td width="200" valign="top"&gt;&lt;/td&gt;
+                &lt;td width="200" valign="top"&gt;&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/table&gt;  
+        
+        &lt;!-- End example table --&gt;
+        
+        &lt;!-- Yahoo Link color fix updated: Simply bring your link styling inline. --&gt;
+        &lt;a href="http://htmlemailboilerplate.com" target ="_blank" title="Styling Links" style="color: orange; text-decoration: none;"&gt;Coloring Links appropriately&lt;/a&gt;
+        
+        &lt;!-- Gmail/Hotmail image display fix: Gmail and Hotmail unwantedly adds in an extra space below images when using non IE browsers.  This can be especially painful when you putting images on top of each other or putting back together an image you spliced for formatting reasons.  Either way, you can add the 'image_fix' class to remove that space below the image.  Make sure to set alignment (don't use float) on your images if you are placing them inline with text.--&gt;
+        &lt;img class="image_fix" src="full path to image" alt="Your alt text" title="Your title text" width="x" height="x" /&gt;
+
+        &lt;!-- Step 2: Working with telephone numbers (including sms prompts).  Use the "mobile-link" class with a span tag to control what number links and what doesn't in mobile clients. --&gt;
+        &lt;span class="mobile_link"&gt;123-456-7890&lt;/span&gt;
+        
+        &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;/table&gt;  
+    &lt;!-- End of wrapper table --&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+</div>
+<!-- end code wrapper -->
+<div class="clearfix"></div>
+
+       
+         <footer id="f2">
+             
+         </footer>     
+    </section>
+    <!-- end two   -->      
+    <section id="three">  
+        <div class="container_12">
+        <h2 class="grid_12"><span style="color:#b8c2b9;">THE GNARLY</span> <span style="color:black;">FEATURES</span></h2>
+        <!-- <div class="grid_2"><img src="images/aka.png" style="float:right;" alt="AKA" /></div>
+        <div class="grid_10" id="dont">Fighting the good fight against poor html support in email
+        </div> -->
+        <div class="feature-text"><h4>Just my doctype</h4><p>While many email clients strip out the doctype or don't allow for one at all, that doesn't mean we don't want to set one for our own testing purposes. In this case, the XHTML 1.0 Strict doctype is used mainly because two popular clients who strip out your doctype, Gmail and Hotmail, use it as the default.</p></div><code class="highlight">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt; </code>
+        <div class="feature-text"><h4>We do need some stinking images</h4><p>The boilerplate sets up a few sensible defaults for using images. It resets the borders around linked images to zero. It sets up a class (image_fix) to use when you don't want space underneath your images. The boilerplate also gives you an example of how to setup your images, always setting the width, height, alts, and titles; which help keep your format intact and consistent.</p></div><code class="highlight">
+        img {outline:none; text-decoration:none; -ms-interpolation-mode: bicubic;} 
+        a img {border:none;} 
+        .image_fix {display:block;}
+        ...
+        &lt;img class="image_fix" src="full path to image" alt="Your alt text" title="Your title text" width="x" height="x" /&gt;
+        </code>
+        <div class="feature-text"><h4>Right this way, your table is ready</h4><p>The boilerplate sets you up with a few starting points for working with tables. The first is an outermost table (#backgroundTable) that acts as a container of sorts &mdash; stretching to the width of the viewable space in an email client. It's needed because some clients arbitrarily restrict the area to render &mdash; possibly resulting in oddly aligned content. Additionally, as it does for images, the boilerplate sets a few defaults for tables that help avoid formatting issues. The borders, cellpadding, cellspacing are set to zero and content is vertically aligned to the top of the cell.</p></div><code class="highlight">
+        #backgroundTable {margin:0; padding:0; width:100% !important; line-height: 100% !important;}
+        ...
+        &lt;table cellpadding="0" cellspacing="0" border="0" id="backgroundTable"&gt;
+            &lt;tr&gt;
+                &lt;td&gt; 
+        </code>
+        <div class="feature-text"><p>The second (inner) table is centered and set to a pixel width of (600px), a good width to use to keep your email from stretching wider than an email client's viewable real estate (think preview pane).</p></div>
+        <code class="highlight">
+        &lt;table cellpadding="0" cellspacing="0" border="0" align="center"&gt;
+            &lt;tr&gt;
+                &lt;td width="200" valign="top"&gt;&lt;/td&gt;
+                &lt;td width="200" valign="top"&gt;&lt;/td&gt;
+                &lt;td width="200" valign="top"&gt;&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/table&gt;  
+        </code>
+        <div class="feature-text"><h4>Resetting the mood</h4><p>A great reset based on one from the good folks over at Mail Chimp. This snippet resets formatting issues with several clients including Outlook, Hotmail, and Gmail. It also includes a sweet fix for some smart phone clients where font sizes are increased to break your layout.</p></div>
+        <code class="highlight">   
+        /* Client-specific Styles */
+        #outlook a {padding:0;} /* Force Outlook to provide a "view in browser" menu link. */
+        body{width:100% !important; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; margin:0; padding:0;} 
+        /* Prevent Webkit and Windows Mobile platforms from changing default font sizes, while not breaking desktop design. */ 
+        .ExternalClass {width:100%;} /* Force Hotmail to display emails at full width */  
+        .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height: 100%;} /* Force Hotmail to display normal line spacing.  More on that: http://www.emailonacid.com/forum/viewthread/43/ */ 
+        #backgroundTable {margin:0; padding:0; width:100% !important; line-height: 100% !important;}
+        /* End reset */
+        ...
+        </code>
+        <div class="feature-text"><h4>Yahooligans is right</h4><p>The boilerplate fixes an issue with the Yahoo Email client where standard paragraph spacing is not applied (most likely due to a reset of some sort). Make sure you bring this sucker inline.</p></div>  
+        <code class="highlight">   
+        p {
+            margin: 1em 0;
+        }
+        </code>
+        <div class="feature-text"><h4>Putting it all out there and stuff</h4><p>Subscribe to receive updates on the html email boilerplate project delivered via, you guessed it, email. Get some good <a href="http://tinyletter.com/ebp" title="Newsletter" alt="Newsletter">email on email action right here</a>.</p></div>
+        <div class="clearfix"></div>    
+        </div>
+       <!-- end container -->
+        <div class="clearfix"></div>
+       <div id="site_footer"></div>
+        <footer class="clearfix">
+            <div id="site_footer_wrapper" class="container_12">
+            <div class="footer_text" class="grid_4">
+            <p>This site and the boilerplate code (unless otherwise specified) are available under the <a href="license.html">MIT license</a>.</p>
+            <p>Site beautification by <a href="http://www.behance.net/taejeong">Tae Design</a> and elbowed into submission by Sean Powell.  This site was built using the fab <a href="http://html5boilerplate.com">HTML5 Boilerplate from Paul Irish</a>, the ever easy-peasy <a href="http://www.jquery.com">Jquery</a>, and hoisted up to the clouds by <a href="http://rackspacecloud.com">Rackspace</a>.</p>
+            <p>This site looks its Sunday best on a browser other than IE.  However, the boilerplate works well anywhere you need it to.</p>
+            <p>Kudos, gratis, down-on-my-knees kinda thanks to: Shana Masterson, Debbie Young, Vikki Salvatoriello, Email Standards Project, MailChimp, Campaign Monitor, Email On Acid, Tae Jeong, Fabio Carneiro, and others...</p>
+            <p>2011 <a href="http://engageyourcause.com">The Engage Group</a></p>
+            </div>
+            <!-- end footer_text -->
+            <div id="share">
+                <div id="share_text">Sharing is caring:</div>
+                    <div id="share_images">
+                        <a href="mailto:?subject=HTMLEmailBoilerplate.com"><img src="images/email.png" width="48" height="43" alt="Email" /></a>
+                        <a href="http://www.facebook.com/sharer.php?u=http://htmlemailboilerplate.com&amp;appid=2309869772"><img src="images/fb.png" width="41" height="43" alt="Fb" /></a>
+                        <a href="https://twitter.com/intent/tweet?url=http://goo.gl/OjQX1&amp;text=Check%20the%20HTML%20Email%20Boilerplate.%20It's%20got%20mo'%20stuff%20in%20it.%20%23ebp" class="twitter-share-button" data-url="http://htmlemailboilerplate.com" data-count="vertical" data-via="seanpowell"><img src="images/twitter.png" width="42" height="43" alt="Twitter" /></a>
+                        <a href="http://www.stumbleupon.com/submit?url=http://htmlemailboilerplate.com"><img src="images/stumble.png" width="40" height="43" alt="Stumble" /></a>
+                    </div>
+                    <div><iframe src="http://www.facebook.com/plugins/like.php?href=htmlemailboilerplate.com&amp;layout=standard&amp;show_faces=false&amp;width=450&amp;action=like&amp;font=verdana&amp;colorscheme=light&amp;height=35" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:35px;" allowTransparency="true"></iframe></div>
+                     <!-- end fb like -->
+                     <div style="margin-top: 60px;">
+                     <a href="http://www.w3.org/html/logo/">
+                     <img src="http://www.w3.org/html/logo/badge/html5-badge-h-css3-multimedia-semantics-storage.png" width="229" height="64" alt="HTML5 Powered with CSS3 / Styling, Multimedia, Semantics, and Offline &amp; Storage" title="HTML5 Powered with CSS3 / Styling, Multimedia, Semantics, and Offline &amp; Storage">
+                     </a>
+                     </div>
+                     <!-- end html5 logo -->
+                </div>
+            </div>
+            <!-- the end of sharing (hmmm) -->
+            </div>
+            <!-- end of footer wrapper -->
+        </footer>
+        <!-- end site footer -->
+    </section>
+    <!-- end three   -->
+    <section id="four">
+        <footer class="clearfix">
+            <div id="m_share">
+                <div id="m_share_text">Help a website out:</div>
+                    <div id="m_share_images">
+                        <a href="mailto:?subject=HTMLEmailBoilerplate.com"><img src="images/email.png" width="48" height="43" alt="Email" /></a>
+                        <a href="http://www.facebook.com/sharer.php?u=http://htmlemailboilerplate.com&amp;appid=2309869772"><img src="images/fb.png" width="41" height="43" alt="Fb" /></a>
+                        <a href="https://twitter.com/intent/tweet?url=http://goo.gl/OjQX1&amp;text=Check%20the%20HTML%20Email%20Boilerplate.%20It's%20got%20mo'%20stuff%20in%20it.%20%23ebp" class="twitter-share-button" data-url="http://htmlemailboilerplate.com" data-count="vertical" data-via="seanpowell"><img src="images/twitter.png" width="42" height="43" alt="Twitter" /></a>
+                        <a href="http://www.stumbleupon.com/submit?url=http://htmlemailboilerplate.com"><img src="images/stumble.png" width="40" height="43" alt="Stumble" /></a>
+                    </div>
+                    <div id="facebook"><iframe src="http://www.facebook.com/plugins/like.php?href=htmlemailboilerplate.com&amp;amp;layout=standard&amp;amp;show_faces=false&amp;amp;width=350&amp;amp;action=like&amp;amp;font=verdana&amp;amp;colorscheme=light&amp;amp;height=35" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:35px;" allowTransparency="true"></iframe>
+                    </div>    
+                     <!-- end fb like -->
+                     <div id="html5">
+                     <a href="http://www.w3.org/html/logo/">
+                     <img src="http://www.w3.org/html/logo/badge/html5-badge-h-css3-multimedia-semantics-storage.png" width="229" height="64" alt="HTML5 Powered with CSS3 / Styling, Multimedia, Semantics, and Offline &amp;amp; Storage" title="HTML5 Powered with CSS3 / Styling, Multimedia, Semantics, and Offline &amp;amp; Storage">
+                     </a>
+            </div>
+            <!-- the end of sharing (hmmm) -->
+            </div>
+            <!-- end of footer wrapper -->
+        </footer>
+        <!-- end site footer -->
+        </section>
+</div>
+<!-- end site container -->
+
+<!-- About Us Ribbon -->
+<div id="about_us">
+     <div id="about_rib"></div>
+     <div id="about_expand"><div class="about_copy">This site was created to put <strong>pen to paper some of our (and our friends') experiences when it comes to rendering html email</strong>.  We thought, hey, how great would it be to use a cool new technology, like HTML5, to showcase some of the pitfalls of an older (rendering-wise) technology &mdash; in this case, email clients like Outlook, Gmail, Hotmail, etc.</div>  
+     <div class="about_copy">We also thought, hey (which is for horses and sometimes cows), why don't we use <a href="http://html5boilerplate.com">Paul Irish's HTML5 Boilerplate</a> (thanks for the inspiration Paul) as our starting point.  And after a little jquery love, 960 peace, and html5 grease; this site came to be.</div>
+     <div class="about_copy">@SeanPowell<br />
+     </div>
+     <div class="about_copy"><a href="version02.html" rel="revision">A revisionist's history...</a>
+      </div>
+     </div>
+     <!-- end about_expand -->
+</div>
+<!-- end about_us -->
+
+<!-- begin hidden content -->
+<section class="hidden">
+
+<!-- begin modals section -->
+
+<div id="warning"><h3>Hold up!</h3>
+<p>The situation here is you're using a browser where some HTML5 and/or CSS3 features are not supported. Firefox, Chrome, Safari or any Webkit/Moz compatible browser will render this site, with or without <em>The Schwartz</em>.</p>
+<img src="images/spaceballs.jpg" width="500" style="margin-left: 25px;" alt="Spaceballs">
+</div> 
+
+<!-- notes -->
+<div id="notessec">
+<a href="notes/note1.html" rel="notes">Note 1</a>
+<a href="notes/note2.html" rel="notes">Note 2</a>
+<a href="notes/note3.html" rel="notes">Note 3</a>
+<a href="notes/note4.html" rel="notes">Note 4</a>
+<a href="notes/note5.html" rel="notes">Note 5</a>
+<a href="notes/note6.html" rel="notes">Note 6</a>
+<a href="notes/note7.html" rel="notes">Note 7</a>
+<a href="notes/note8.html" rel="notes">Note 8</a>
+<a href="notes/note9.html" rel="notes">Note 9</a>
+<a href="notes/note10.html" rel="notes">Note 10</a>
+<a href="notes/note11.html" rel="notes">Note 11</a>
+</div>      
+<!-- end notes -->   
+
+</section>
+<!-- end hidden content -->
+ 
+ 
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+    <script>!window.jQuery && document.write(unescape('%3Cscript src="js/libs/jquery-1.5.1.min.js"%3E%3C/script%3E'))</script>
+    <script src="js/plugins.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/libs/jquery.colorbox-min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/shCore.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/shBrushXml.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/shBrushCss.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/shBrushPlain.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+         SyntaxHighlighter.all()
+    </script>
+
+    <!-- Include jQuery Syntax Highlighter --> 
+    <script src="http://github.com/balupton/jquery-syntaxhighlighter/raw/master/scripts/jquery.syntaxhighlighter.min.js"></script>
+    <!-- Initialise jQuery Syntax Highlighter --> 
+    <script type="text/javascript">$.SyntaxHighlighter.init();</script>
     
-
+    <script src="js/mylibs/animate.script.js" type="text/javascript" charset="utf-8"></script>
+    <!--[if lt IE 7 ]>
+    <script src="js/libs/dd_belatedpng.js"></script>
+    <script> DD_belatedPNG.fix('img, .png_bg');</script>
+    <![endif]-->
+    <script>
+        var _gaq=[['_setAccount','UA-4466412-5'],['_trackPageview']];
+        (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+        g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+        s.parentNode.insertBefore(g,s)}(document,'script'));
+    </script>
     
+    <!-- Get Satisfaction Script -->
+    <script type="text/javascript" charset="utf-8">
+      var is_ssl = ("https:" == document.location.protocol);
+      var asset_host = is_ssl ? "https://s3.amazonaws.com/getsatisfaction.com/" : "http://s3.amazonaws.com/getsatisfaction.com/";
+      document.write(unescape("%3Cscript src='" + asset_host + "javascripts/feedback-v2.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
 
-    
+    <script type="text/javascript" charset="utf-8">
+      var feedback_widget_options = {};
 
-    
-      <h2>Authors</h2>
-      <p>Emil Rømer Christensen (christensen.emil@gmail.com)<br/>Sean Powell (sean@pmgdirect.net)<br/>Trey Hunner (treyhunner@gmail.com)<br/>      </p>
-    
-
-    
-      <h2>Contact</h2>
-      <p> (sean@pmgdirect.net)<br/>      </p>
-    
-
-    <h2>Download</h2>
-    <p>
-      You can download this project in either
-      <a href="https://github.com/seanpowell/Email-Boilerplate/zipball/master">zip</a> or
-      <a href="https://github.com/seanpowell/Email-Boilerplate/tarball/master">tar formats.
-    </p>
-    <p>You can also clone the project with <a href="http://git-scm.com">Git</a>
-      by running:
-      <pre>$ git clone git://github.com/seanpowell/Email-Boilerplate</pre>
-    </p>
-
-    <div class="footer">
-      get the source code on GitHub : <a href="https://github.com/seanpowell/Email-Boilerplate">seanpowell/Email-Boilerplate</a>
-    </div>
-
-  </div>
-
+      feedback_widget_options.display = "overlay";  
+      feedback_widget_options.company = "ebp";
+      feedback_widget_options.placement = "left";
+      feedback_widget_options.color = "#222";
+      feedback_widget_options.style = "idea";
+      var feedback_widget = new GSFN.feedback_widget(feedback_widget_options);
+    </script>
+    <!-- end get satisfaction -->
+  
 </body>
 </html>
