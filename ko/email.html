@@ -1,20 +1,20 @@
 ﻿<!-- ***************************************************
 ********************************************************
 
-HOW TO USE: Use these code examples as a guideline for formatting your HTML email. You may want to create your own template based on these snippets or just pick and choose the ones that fix your specific rendering issue(s). There are two main areas in the template: 1. The header (head) area of the document. You will find global styles, where indicated, to move inline. 2. The body section contains more specific fixes and guidance to use where needed in your design.
+사용방법: 이 코드 예제들을 활용하여 당신의 HTML 이메일 템플릿을 포매팅하는 데 필요한 가이드라인으로 사용하세요. 당신의 특별한 목적에 따라 여기서 제공하는 스니펫들을 이용하거나 몇가지를 선택하여 당신의 고유한 템플릿들을 만들고 싶을 수도 있습니다. 템플릿에는 두 개의 주요 영역이 있습니다: 1. 문서의 헤더 영역입니다. 당신은 이곳에서 지정한 곳에 인라인 스타일로 변환시켜야 하는 글로벌 스타일을 찾을 수 있습니다. 2. 본문 영역입니다. 이곳은 당신의 디자인을 위해 좀 더 구체적인 부분에 대한 수정 사항과 가이드를 포함합니다.
 
-DO NOT COPY OVER COMMENTS AND INSTRUCTIONS WITH THE CODE to your message or risk spam box banishment :).
+코멘트 부분과 코드를 포함한 사용방법 지침 부분을 이메일에 포함시키지 마세요! 만약에 저 부분을 포함시킨다면 당신의 이메일은 스팸 처리가 될 가능성이 높습니다. :)
 
-It is important to note that sometimes the styles in the header area should not be or don't need to be brought inline. Those instances will be marked accordingly in the comments.
+반드시 기억하세요. 헤더 영역에 있는 스타일은 종종 인라인 스타일로 변환시킬 필요가 없거나 변환시켜서는 안됩니다. 이런 경우는 코멘트에 별도로 표시해 놓았습니다.
 
 ********************************************************
 **************************************************** -->
 
-<!-- Using the xHTML doctype is a good practice when sending HTML email. While not the only doctype you can use, it seems to have the least inconsistencies. For more information on which one may work best for you, check out the resources below.
+<!-- XHTML 문서타입을 사용하는 것은 HTML 포맷의 이메일을 보낼 때 아주 유용합니다. 문서 타입을 단 한가지만 사용할 수 없다고 하더라도, 일관성이 흐트러지는 것을 최소화 할 수 있습니다. 더 많은 정보들을 필요로 하면, 아래의 링크들을 참조하세요.
 
-UPDATED: Now using xHTML strict based on the fact that gmail and hotmail uses it.  Find out more about that, and another great boilerplate, here: http://www.emailology.org/#1
+수정: 이제 Gmail과 Hotmail 사용하는 XHTML strict 문서타입을 사용합니다. 이에 대한 더 많은 정보들과 또다른 훌륭한 보일러플레이트는 이곳을 참조하세요: http://www.emailology.org/#1
 
-More info/Reference on doctypes in email:
+이메일에서 쓰이는 문서타입에 대한 더 많은 정보들은 아래를 참조하세요:
 Campaign Monitor - http://www.campaignmonitor.com/blog/post/3317/correct-doctype-to-use-in-html-email/
 Email on Acid - http://www.emailonacid.com/blog/details/C18/doctype_-_the_black_sheep_of_html_email_design
 -->
@@ -25,83 +25,95 @@ Email on Acid - http://www.emailonacid.com/blog/details/C18/doctype_-_the_black_
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-	<title>Your Message Subject or Title</title>
+	<title>이메일 제목</title>
 	<style type="text/css">
 
 		/***********
-		Originally based on The MailChimp Reset from Fabio Carneiro, MailChimp User Experience Design
-		More info and templates on Github: https://github.com/mailchimp/Email-Blueprints
-		http://www.mailchimp.com &amp; http://www.fabio-carneiro.com
+		MailChimp 사의 User Experience Design 부서에 근무하는 Fabio Carneiro 가 제작한 MailChimp Reset 을 기초로 합니다.
+		더 많은 정보와 템플릿은 아래를 참고하세요:
+		GitHub: https://github.com/mailchimp/Email-Blueprints
+		http://www.mailchimp.com
+		http://www.fabio-carneiro.com
 
-		INLINE: Yes.
+		인라인 스타일링 가능여부: 가능
 		***********/
-		/* Client-specific Styles */
-		#outlook a {padding:0;} /* Force Outlook to provide a "view in browser" menu link. */
+		/* 클라이언트 특화 스타일 */
+		/* 아웃룩에서 강제로 "View in browser" 메뉴 링크를 제공하게 합니다. */
+		#outlook a {padding:0;}
+
+		/* Webkit 과 Windows Mobile 플랫폼에서 데스크탑 디자인은 변화시키지 않은 채 기본 폰트 크기를 변경하는 것을 막아줍니다. */
 		body{width:100% !important; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; margin:0; padding:0;}
-		/* Prevent Webkit and Windows Mobile platforms from changing default font sizes, while not breaking desktop design. */
-		.ExternalClass {width:100%;} /* Force Hotmail to display emails at full width */
-		.ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height: 100%;} /* Force Hotmail to display normal line spacing.  More on that: http://www.emailonacid.com/forum/viewthread/43/ */
+
+		/* Hotmail 에서 이메일을 강제로 전체너비로 볼 수 있게끔 합니다. */
+		.ExternalClass {width:100%;}
+		
+		/* Hotmail 에서 줄간격을 강제로 정상적으로 보여주게끔 합니다. 더 많은 정보는 http://www.emailonacid.com/forum/viewthread/43/ */
+		.ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height: 100%;}
 		#backgroundTable {margin:0; padding:0; width:100% !important; line-height: 100% !important;}
 		/* End reset */
 
-		/* Some sensible defaults for images
-		1. "-ms-interpolation-mode: bicubic" works to help ie properly resize images in IE. (if you are resizing them using the width and height attributes)
-		2. "border:none" removes border when linking images.
-		3. Updated the common Gmail/Hotmail image display fix: Gmail and Hotmail unwantedly adds in an extra space below images when using non IE browsers. You may not always want all of your images to be block elements. Apply the "image_fix" class to any image you need to fix.
+		/* 이미지 처리를 위한 몇가지 합리적인 기본 설정
+		1. "-ms-interpolation-mode: bicubic" 은 IE 에서 이미지 리사이징을 제대로 할 수 있게 도와줍니다. (width 와 height 속성을 통해 이미지 리사이징을 하려는 경우)
+		2. "border:none" 이미지에 링크를 걸어줄 때 경계선을 없애줍니다.
+		3. Gmail 과 Hotmail 에서 이미지를 보여주는 것에 대한 수정사항: Gmail 과 Hotmail 은 비IE 브라우저에서 불필요하게 이미지 아랫부분에 공백을 삽입합니다. 모든 이미지들을 블록 요소로 처리하고 싶지 않을 수도 있습니다. 이를 위해서는 "image_fix" 클라스를 원하는 이미지에 적용시키세요.
 
-		Bring inline: Yes.
+		인라인 스타일링 가능여부: 가능
 		*/
 		img {outline:none; text-decoration:none; -ms-interpolation-mode: bicubic;}
 		a img {border:none;}
 		.image_fix {display:block;}
 
-		/** Yahoo paragraph fix: removes the proper spacing or the paragraph (p) tag. To correct we set the top/bottom margin to 1em in the head of the document. Simple fix with little effect on other styling. NOTE: It is also common to use two breaks instead of the paragraph tag but I think this way is cleaner and more semantic. NOTE: This example recommends 1em. More info on setting web defaults: http://www.w3.org/TR/CSS21/sample.html or http://meiert.com/en/blog/20070922/user-agent-style-sheets/
+		/** Yahoo 문단 관련 수정사항: <p> 태그에 적용한 공백을 제거합니다. 이를 위해서 문서의 head 부분에 top/bottom margin 값을 1em 으로 설정했습니다. 이것은 다른 요소들의 스타일링에 최소한으로 영향을 주게끔 하는 간단한 수정사항입니다. 알림: <p> 태그 대신 두 개의 <br /> 를 사용하는 것 역시 일반적입니다. 하지만 이 방법이 훨씬 더 시만틱하고 간결하다고 생각합니다. 알림: 이 예제는 1em 을 사용하기를 권장합니다. 웹 기본 설정에 대한 더 많은 정보는 http://www.w3.org/TR/CSS21/sample.html 또는 http://meiert.com/en/blog/20070922/user-agent-style-sheets/
 
-		Bring inline: Yes.
+		인라인 스타일링 가능여부: 가능
 		**/
 		p {margin: 1em 0;}
 
-		/** Hotmail header color reset: Hotmail replaces your header color styles with a green color on H2, H3, H4, H5, and H6 tags. In this example, the color is reset to black for a non-linked header, blue for a linked header, red for an active header (limited support), and purple for a visited header (limited support).  Replace with your choice of color. The !important is really what is overriding Hotmail's styling. Hotmail also sets the H1 and H2 tags to the same size.
+		/** Hotmail 헤더 태그 색상 리셋: Hotmail 은 헤더 - <h2>, <h3>, <h4, <h5>, <h6> - 태그들에 대해 색상을 녹색으로 바꿉니다. 여기 예제에서는 링크가 없는 헤더 태그는 검정색으로, 링크가 있는 헤더 태그는 파란색, 활성화된 헤더 태그는 빨간색 (제한적임), 방문했던 태그는 보라색(제한적임)으로 바꿉니다. 원하는 색상으로 바꾸세요. !important 는 정말로 Hotmail 의 스타일링을 덮어 씌웁니다. Hotmail 은 또한 <h1> 과 <h2> 태그를 똑같은 크기로 설정합니다.
 
-		Bring inline: Yes.
+		인라인 스타일링 가능여부: 가능
 		**/
 		h1, h2, h3, h4, h5, h6 {color: black !important;}
 
 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {color: blue !important;}
 
 		h1 a:active, h2 a:active,  h3 a:active, h4 a:active, h5 a:active, h6 a:active {
-			color: red !important; /* Preferably not the same color as the normal header link color.  There is limited support for psuedo classes in email clients, this was added just for good measure. */
+			/* 보통 일반 링크 색상과 같은 색상으로 설정하지 않습니다. 이메일 클라이언트에 따라 유사 클라스를 제한적으로 지원할 수 있습니다만 이것은 좀 더 확실하게 하기 위해 추가해 놓는 것이 좋습니다. */
+			color: red !important;
 		 }
 
 		h1 a:visited, h2 a:visited,  h3 a:visited, h4 a:visited, h5 a:visited, h6 a:visited {
-			color: purple !important; /* Preferably not the same color as the normal header link color. There is limited support for psuedo classes in email clients, this was added just for good measure. */
+			/* 보통 일반 링크 색상과 같은 색상으로 설정하지 않습니다. 이메일 클라이언트에 따라 유사 클라스를 제한적으로 지원할 수 있습니다만 이것은 좀 더 확실하게 하기 위해 추가해 놓는 것이 좋습니다. */
+			color: purple !important;
 		}
 
-		/** Outlook 07, 10 Padding issue: These "newer" versions of Outlook add some padding around table cells potentially throwing off your perfectly pixeled table.  The issue can cause added space and also throw off borders completely.  Use this fix in your header or inline to safely fix your table woes.
+		/** 아웃룩 2007, 아웃룩 2010 padding 이슈: 아웃룩의 비교적 "새" 버전들에서는 테이블 셀들 주위에 padding 속성을 추가합니다. 이로 인해 픽셀단위로 다듬어진 테이블들이 깨질 수 있습니다. 또한 추가적인 공백을 초래할 수 있으며, 테이블의 경계선도 완전히 날려버립니다. 아래 수정사항을 헤더 영억에서 선언하거나 인라인 스타일로 지정하여 안전하게 테이블 설정을 하세요.
 
-		More info: http://www.ianhoar.com/2008/04/29/outlook-2007-borders-and-1px-padding-on-table-cells/
+		더 많은 정보들은:
+		http://www.ianhoar.com/2008/04/29/outlook-2007-borders-and-1px-padding-on-table-cells/
 		http://www.campaignmonitor.com/blog/post/3392/1px-borders-padding-on-table-cells-in-outlook-07/
 
 		H/T @edmelly
 
-		Bring inline: No.
+		인라인 스타일링 가능여부: 불가능
 		**/
 		table td {border-collapse: collapse;}
 
-    /** Remove spacing around Outlook 07, 10 tables
+		/** 아웃룩 2007, 아웃룩 2010 에서 테이블 주위 공백 제거
 
-    More info : http://www.campaignmonitor.com/blog/post/3694/removing-spacing-from-around-tables-in-outlook-2007-and-2010/
+		더 많은 정보는: http://www.campaignmonitor.com/blog/post/3694/removing-spacing-from-around-tables-in-outlook-2007-and-2010/
 
-    Bring inline: Yes
-    **/
-    table { border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; }
+		인라인 스타일링 가능여부: 가능
+		**/
+		table { border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; }
 
-		/* Styling your links has become much simpler with the new Yahoo.  In fact, it falls in line with the main credo of styling in email, bring your styles inline.  Your link colors will be uniform across clients when brought inline.
+		/* 새 Yahoo 에서는 링크 스타일링이 훨씬 간단해졌습니다. 사실, 이것은 이메일 안에서 전체를 관장하는 인라인 스타일이 됩니다. 따라서, 링크 색상은 클라이언트 전체를 통틀어 동일하게 됩니다.
 
-		Bring inline: Yes. */
+		인라인 스타일링 가능여부: 가능
+		*/
 		a {color: orange;}
 
-		/* Or to go the gold star route...
+		/* 또는
 		a:link { color: orange; }
 		a:visited { color: blue; }
 		a:hover { color: green; }
@@ -109,48 +121,46 @@ Email on Acid - http://www.emailonacid.com/blog/details/C18/doctype_-_the_black_
 
 		/***************************************************
 		****************************************************
-		MOBILE TARGETING
+		모바일 기기 대응
 
-		Use @media queries with care.  You should not bring these styles inline -- so it's recommended to apply them AFTER you bring the other stlying inline.
+		미디어 쿼리는 조심해서 사용하세요. 이것들은 인라인으로 가져가서는 안됩니다. 따라서, 다른 인라인 스타일링을 모두 적용시킨 후에 이 스타일들을 적용시키는 것이 좋습니다.
 
-		Note: test carefully with Yahoo.
-		Note 2: Don't bring anything below this line inline.
+		알림: Yahoo 에서는 주의해서 테스트하세요.
+		알림2: 이 밑으로는 인라인 스타일링으로 가져가면 안됩니다.
 		****************************************************
 		***************************************************/
 
-		/* NOTE: To properly use @media queries and play nice with yahoo mail, use attribute selectors in place of class, id declarations.
+		/* 알림: 미디어 쿼리를 Yahoo 메일에서 올바르게 적용시키기 위해서는 속성 선택자를 클라스와 ID에서 사용하세요.
 		table[class=classname]
 		Read more: http://www.campaignmonitor.com/blog/post/3457/media-query-issues-in-yahoo-mail-mobile-email/
 		*/
 		@media only screen and (max-device-width: 480px) {
 
-			/* A nice and clean way to target phone numbers you want clickable and avoid a mobile phone from linking other numbers that look like, but are not phone numbers.  Use these two blocks of code to "unstyle" any numbers that may be linked.  The second block gives you a class to apply with a span tag to the numbers you would like linked and styled.
+			/* 클릭 가능하게끔 하고 싶은 전화번호와 전화번호는 아니지만 전화번호처럼 보여서 클릭이 가능하게끔 되는 것을 피할 수 있는 깔끔한 방법입니다. 이 두 코드 블록을 쓰면 숫자들에 링크가 걸리는 것을 막을 수 있습니다. 두번째 블록은 <span> 태그를 이용해 클라스를 써서 링크와 스타일링을 적용시키게 됩니다.
 
-			Inspired by Campaign Monitor's article on using phone numbers in email: http://www.campaignmonitor.com/blog/post/3571/using-phone-numbers-in-html-email/.
-
-			Step 1 (Step 2: line 224)
+			전화번호를 이용하는 방법에 대한 Campaign Monitor 의 포스트: http://www.campaignmonitor.com/blog/post/3571/using-phone-numbers-in-html-email/.
 			*/
 			a[href^="tel"], a[href^="sms"] {
 						text-decoration: none;
-						color: black; /* or whatever your want */
+						color: black; /* 또는 원하는 색상 아무거나 */
 						pointer-events: none;
 						cursor: default;
 					}
 
 			.mobile_link a[href^="tel"], .mobile_link a[href^="sms"] {
 						text-decoration: default;
-						color: orange !important; /* or whatever your want */
+						color: orange !important; /* 또는 원하는 색상 아무거나 */
 						pointer-events: auto;
 						cursor: default;
 					}
 		}
 
-		/* More Specific Targeting */
+		/* 좀 더 구체적으로... */
 
 		@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-			/* You guessed it, ipad (tablets, smaller screens, etc) */
+			/* iPad 또는 다른 타블렛 스크린들... */
 
-			/* Step 1a: Repeating for the iPad */
+			/* iPad 용으로 다시 반복 */
 			a[href^="tel"], a[href^="sms"] {
 						text-decoration: none;
 						color: blue; /* or whatever your want */
@@ -167,25 +177,26 @@ Email on Acid - http://www.emailonacid.com/blog/details/C18/doctype_-_the_black_
 		}
 
 		@media only screen and (-webkit-min-device-pixel-ratio: 2) {
-			/* Put your iPhone 4g styles in here */
+			/* iPhone 4 관련 스타일은 이곳에 입력하세요. */
 		}
 
-		/* Following Android targeting from:
+		/* 안드로이드 관련해서는:
 		http://developer.android.com/guide/webapps/targeting.html
-		http://pugetworks.com/2011/04/css-media-queries-for-targeting-different-mobile-devices/  */
+		http://pugetworks.com/2011/04/css-media-queries-for-targeting-different-mobile-devices/
+		*/
 		@media only screen and (-webkit-device-pixel-ratio:.75){
-			/* Put CSS for low density (ldpi) Android layouts in here */
+			/* 저해상도(ldpi)용 안드로이드 레이아웃을 위한 CSS 는 여기에 지정하세요. */
 		}
 		@media only screen and (-webkit-device-pixel-ratio:1){
-			/* Put CSS for medium density (mdpi) Android layouts in here */
+			/* 중간해상도(mdpi)용 안드로이드 레이아웃을 위한 CSS 는 여기에 지정하세요. */
 		}
 		@media only screen and (-webkit-device-pixel-ratio:1.5){
-			/* Put CSS for high density (hdpi) Android layouts in here */
+			/* 고해상도(hdpi)용 안드로이드 레이아웃을 위한 CSS 는 여기에 지정하세요. */
 		}
 		/* end Android targeting */
 	</style>
 
-	<!-- Targeting Windows Mobile -->
+	<!-- Windows Mobile 관련 스타일링 -->
 	<!--[if IEMobile 7]>
 	<style type="text/css">
 
@@ -194,23 +205,23 @@ Email on Acid - http://www.emailonacid.com/blog/details/C18/doctype_-_the_black_
 
 	<!-- ***********************************************
 	****************************************************
-	END MOBILE TARGETING
+	모바일 기기 대응 끝
 	****************************************************
 	************************************************ -->
 
 	<!--[if gte mso 9]>
 	<style>
-		/* Target Outlook 2007 and 2010 */
+		/* 아웃룩 2007과 아웃룩 2010용 스타일링 */
 	</style>
 	<![endif]-->
 </head>
 <body>
-	<!-- Wrapper/Container Table: Use a wrapper table to control the width and the background color consistently of your email. Use this approach instead of setting attributes on the body tag. -->
+	<!-- 컨테이너 테이블을 사용하여 이메일의 너비와 배경색을 일관적으로 적용하세요. <body> 태그에 속성을 적용시키는 것보다 안전합니다. -->
 	<table cellpadding="0" cellspacing="0" border="0" id="backgroundTable">
 	<tr>
 		<td>
 
-		<!-- Tables are the most common way to format your email consistently. Set your table widths inside cells and in most cases reset cellpadding, cellspacing, and border to zero. Use nested tables as a way to space effectively in your message. -->
+		<!-- 테이블은 이메일 포매팅을 일관적으로 적용시키기 위한 가장 일반적인 방법입니다. 테이블 셀 안에서 width 를 리셋하세요. 거의 대부분의 경우 cellpadding, cellspacing, border 값을 0으로 지정합니다. 테이블 안에 다시 테이블을 사용하는 방법이 이메일 안에서 공백들을 처리하는 데 가장 효과적입니다. -->
 		<table cellpadding="0" cellspacing="0" border="0" align="center">
 			<tr>
 				<td width="200" valign="top"></td>
@@ -221,13 +232,13 @@ Email on Acid - http://www.emailonacid.com/blog/details/C18/doctype_-_the_black_
 
 		<!-- End example table -->
 
-		<!-- Yahoo Link color fix updated: Simply bring your link styling inline. -->
+		<!-- Yahoo 링크 색상 수정사항 업데이트: 인라인 스타일링을 이용하세요. -->
 		<a href="http://htmlemailboilerplate.com" target ="_blank" title="Styling Links" style="color: orange; text-decoration: none;">Coloring Links appropriately</a>
 
-		<!-- Gmail/Hotmail image display fix: Gmail and Hotmail unwantedly adds in an extra space below images when using non IE browsers.  This can be especially painful when you putting images on top of each other or putting back together an image you spliced for formatting reasons.  Either way, you can add the 'image_fix' class to remove that space below the image.  Make sure to set alignment (don't use float) on your images if you are placing them inline with text.-->
+		<!-- Gmail 과 Hotmail 이미지 표현 수정사항: Gmail 과 Hotmail 은 비IE 브라우저들에서 불필요한 공백을 추가합니다. 이것은 특히나 포매팅 목적으로 이미지들을 잘라서 삽입할 경우 더욱 곤란해집니다. 어떤 식이든 "image_fix" 클라스를 추가하면 이미지 아랫부분의 공백을 제거할 수 있습니다. 이미지와 텍스트를 함께 배치하고 싶다면 이미지에 align 속성을 지정하는 것을 확인하세요. float 속성은 사용하지 마세요. -->
 		<img class="image_fix" src="full path to image" alt="Your alt text" title="Your title text" width="x" height="x" />
 
-		<!-- Step 2: Working with telephone numbers (including sms prompts).  Use the "mobile_link" class with a span tag to control what number links and what doesn't in mobile clients. -->
+		<!-- 전화번호에 적용시키기. "mobile_link" 클라스를 <span> 태그와 함께 사용해서 숫자들에 적용시키세요. -->
 		<span class="mobile_link">123-456-7890</span>
 
 		</td>

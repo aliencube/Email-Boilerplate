@@ -35,4 +35,4 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 
 ### 공헌자들 Contributors
-[이곳을 보세요 >>](https://github.com/seanpowell/Email-Boilerplate/blob/master/contributors.txt)
+[이곳을 보세요 >>](https://github.com/aliencube/Email-Boilerplate/blob/master/ko/contributors.txt)
